@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ms"
+        android:title="ମନ୍ତ୍ର ଶୁଣନ୍ତୁ" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/tm"
+        android:title="ଲିଖିତ ମନ୍ତ୍ର" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_live_tv_black_24dp"
+        android:title="ମନ୍ଦିର ପାର୍ଥନା ସାପ୍ତାହିକ Live" />
+    <item
+        android:id="@+id/rate"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:title="ରେଟ କରନ୍ତୁ" />
+    <item
+        android:id="@+id/prv"
+        android:icon="@drawable/ic_copyright_black_24dp"
+        android:title="Privacy Policy" />
+
+</menu>
+
+

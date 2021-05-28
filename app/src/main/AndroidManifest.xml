@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="andromo.odiamantra">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/iconm"
+        android:label=""
+        android:roundIcon="@mipmap/iconm"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="andromo.odiamantra.Dp"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="andromo.odiamantra.MainActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="andromo.odiamantra.SongDisplay"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|screenLayout|uiMode|smallestScreenSize"
+            android:hardwareAccelerated="true"
+            android:parentActivityName="andromo.odiamantra.MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="andromo.odiamantra.MainActivity" />
+        </activity>
+        <activity android:name="andromo.odiamantra.Prv"
+        android:parentActivityName="andromo.odiamantra.MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="andromo.odiamantra.MainActivity" />
+        </activity>
+        <activity android:name="andromo.odiamantra.TextActivity"
+            android:parentActivityName="andromo.odiamantra.MainActivity"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="andromo.odiamantra.MainActivity" />
+        </activity>
+        <activity android:name="andromo.odiamantra.YpActivity"
+            android:parentActivityName="andromo.odiamantra.MainActivity"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="andromo.odiamantra.MainActivity" />
+        </activity>
+        <activity android:name="andromo.odiamantra.ytview"
+            android:parentActivityName="andromo.odiamantra.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="andromo.odiamantra.MainActivity" />
+        </activity>
+        <service
+            android:name="andromo.odiamantra.firebse.FirebaseMessageService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service android:name="andromo.odiamantra.firebse.FireBaseInstanceIDService"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@mipmap/iconm" />
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent" />
+
+        </service>
+    </application>
+
+</manifest>
